@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `unw_accessors_t` struct in crate `unwind_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, unw_accessors_t">
+
+    <title>unwind_sys::unw_accessors_t - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct unw_accessors_t</p><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.find_proc_info">find_proc_info</a><a href="#structfield.put_unwind_info">put_unwind_info</a><a href="#structfield.get_dyn_info_list_addr">get_dyn_info_list_addr</a><a href="#structfield.access_mem">access_mem</a><a href="#structfield.access_reg">access_reg</a><a href="#structfield.resume">resume</a><a href="#structfield.get_proc_name">get_proc_name</a></div></div><p class='location'><a href='index.html'>unwind_sys</a></p><script>window.sidebarCurrent = {name: 'unw_accessors_t', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>unwind_sys</a>::<wbr><a class="struct" href=''>unw_accessors_t</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/unwind_sys/lib.rs.html#72-124' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct unw_accessors_t {
+    pub find_proc_info: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, ip: <a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, pip: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../unwind_sys/struct.unw_proc_info_t.html" title="struct unwind_sys::unw_proc_info_t">unw_proc_info_t</a>, need_unwind_info: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;,
+    pub put_unwind_info: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, pip: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../unwind_sys/struct.unw_proc_info_t.html" title="struct unwind_sys::unw_proc_info_t">unw_proc_info_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>&gt;,
+    pub get_dyn_info_list_addr: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, dilap: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;,
+    pub access_mem: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, addr: <a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, valp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, write: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;,
+    pub access_reg: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, regnum: <a class="type" href="../unwind_sys/type.unw_regnum_t.html" title="type unwind_sys::unw_regnum_t">unw_regnum_t</a>, valp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, write: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;,
+    pub resume: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, cp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../unwind_sys/struct.unw_cursor_t.html" title="struct unwind_sys::unw_cursor_t">unw_cursor_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;,
+    pub get_proc_name: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, addr: <a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, bufp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, buf_len: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.size_t.html" title="type libc::size_t">size_t</a>, offp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;,
+    // some fields omitted
+}</pre><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.find_proc_info" class="structfield small-section-header">
+                           <a href="#structfield.find_proc_info" class="anchor field"></a>
+                           <span id="find_proc_info.v" class='invisible'>
+                           <code>find_proc_info: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, ip: <a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, pip: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../unwind_sys/struct.unw_proc_info_t.html" title="struct unwind_sys::unw_proc_info_t">unw_proc_info_t</a>, need_unwind_info: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;</code>
+                           </span></span><span id="structfield.put_unwind_info" class="structfield small-section-header">
+                           <a href="#structfield.put_unwind_info" class="anchor field"></a>
+                           <span id="put_unwind_info.v" class='invisible'>
+                           <code>put_unwind_info: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, pip: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../unwind_sys/struct.unw_proc_info_t.html" title="struct unwind_sys::unw_proc_info_t">unw_proc_info_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>&gt;</code>
+                           </span></span><span id="structfield.get_dyn_info_list_addr" class="structfield small-section-header">
+                           <a href="#structfield.get_dyn_info_list_addr" class="anchor field"></a>
+                           <span id="get_dyn_info_list_addr.v" class='invisible'>
+                           <code>get_dyn_info_list_addr: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, dilap: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;</code>
+                           </span></span><span id="structfield.access_mem" class="structfield small-section-header">
+                           <a href="#structfield.access_mem" class="anchor field"></a>
+                           <span id="access_mem.v" class='invisible'>
+                           <code>access_mem: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, addr: <a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, valp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, write: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;</code>
+                           </span></span><span id="structfield.access_reg" class="structfield small-section-header">
+                           <a href="#structfield.access_reg" class="anchor field"></a>
+                           <span id="access_reg.v" class='invisible'>
+                           <code>access_reg: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, regnum: <a class="type" href="../unwind_sys/type.unw_regnum_t.html" title="type unwind_sys::unw_regnum_t">unw_regnum_t</a>, valp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, write: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;</code>
+                           </span></span><span id="structfield.resume" class="structfield small-section-header">
+                           <a href="#structfield.resume" class="anchor field"></a>
+                           <span id="resume.v" class='invisible'>
+                           <code>resume: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, cp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../unwind_sys/struct.unw_cursor_t.html" title="struct unwind_sys::unw_cursor_t">unw_cursor_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;</code>
+                           </span></span><span id="structfield.get_proc_name" class="structfield small-section-header">
+                           <a href="#structfield.get_proc_name" class="anchor field"></a>
+                           <span id="get_proc_name.v" class='invisible'>
+                           <code>get_proc_name: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;unsafe extern &quot;C&quot; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.fn.html">fn</a>(asp: <a class="type" href="../unwind_sys/type.unw_addr_space_t.html" title="type unwind_sys::unw_addr_space_t">unw_addr_space_t</a>, addr: <a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, bufp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, buf_len: <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.size_t.html" title="type libc::size_t">size_t</a>, offp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../unwind_sys/type.unw_word_t.html" title="type unwind_sys::unw_word_t">unw_word_t</a>, arg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/libc/x86_64-unknown-linux-gnu/libc/type.c_int.html" title="type libc::c_int">c_int</a>&gt;</code>
+                           </span></span></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "unwind_sys";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
